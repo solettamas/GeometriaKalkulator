@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Geometria</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="kalkulal.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class=" text-center font-weight-bold">
+            Geometria Kalkulátor
+        </h1>
+    </div>
+    <div class="row ">
+        <div class="container col-xs-12 col-md-6 col-xl-3">
+            <div class="card">
+                <img src="images/triangle1.svg" alt="Háromszög" class="card-img-top ">
+                <div class="card-body">
+                    <h5>Háromszög</h5>
+                    <fieldset>
+                        <label for="hA">A oldal: (cm)</label> 
+                        <input oninput="hKerulet(); hTerulet()" type="number" id="hA" name="hA"> 
+                        <br>
+                        <label for="hB">B oldal: (cm)</label>
+                        <input oninput="hKerulet()" type="number" id="hB" name="hB"><br>
+                        <label for="hC">C oldal: (cm)</label>
+                        <input oninput="hKerulet()" type="number" id="hC" name="hC"><br>
+                        <label for="hMa">Magasság (cm)</label>
+                        <input oninput="hTerulet()" type="number" id="hMa" name="hMa"><br>
+                        <label for="hK">Kerület (cm)</label>
+                        <input type="text" id="hK" name="hK" disabled><br>
+                        <label for="hT">Terület (cm<sup>2</sup>)</label>
+                        <input type="text" id="hT" name="hT" disabled> 
+
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <div class="container col-xs-12 col-md-6 col-xl-3">
+            <div class="card">
+                <img src="images/teglalap.png" alt="Téglalap" class="card-img-top ">
+                <div class="card-body">
+                    <h5>Téglalap</h5>
+                    <fieldset>
+                        <label for="tA">A oldal: (cm)</label>
+                        <input oninput="tKerulet(); tTerulet()" type="number" id="tA" name="tA">
+                        <br>
+                        <label for="tB">B oldal: (cm)</label>
+                        <input oninput="tKerulet(); tTerulet()" type="number" id="tB" name="tB">
+                        <br>
+                        <label for="tK">Kerület (cm)</label>
+                        <input type="text" id="tK" name="tK" disabled>
+                        <br>
+                        <label for="tT">Terület (cm<sup>2</sup>)</label>
+                        <input type="text" id="tT" name="tT" disabled>
+                        <br>
+
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <div class="container col-xs-12 col-md-6 col-xl-3">
+            <div class="card">
+                <img src="images/henger.svg" alt="Henger" class="card-img-top ">
+                <div class="card-body">
+                    <h5>Henger</h5>
+                    <fieldset>
+                        <label for="heS">Sugár (r): (cm)</label>
+                        <input oninput="heFelszin(); heTerfogat()" type="number" id="heS" name="heS">
+                        <br>
+                        <label for="heS">Magasság: (cm)</label>
+                        <input oninput="heFelszin(); heTerfogat()" type="number" id="heMa" name="heMa">
+                        <br>
+                        <label for="heF">Felszín (cm<sup>2</sup>)</label>
+                        <input type="text" id="heF" name="heF" disabled>
+                        <br>
+                        <label for="heT">Térfogat (cm<sup>3</sup>)</label>
+                        <input type="text" id="heT" name="heT" disabled>
+                        <br>
+
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <div class="container col-xs-12 col-md-6 col-xl-3">
+            <div class="card">
+                <img src="images/kocka.svg" alt="Kocka" class="card-img-top ">
+                <div class="card-body">
+                    <h5>Kocka</h5>
+                    <fieldset>
+                        <label for="koA">A hossza: (cm)</label>
+                        <input oninput="koFelszin(); koTerfogat()" type="number" id="koA" name="koA">
+                        <br>
+                        <label for="koF">Felszín (cm<sup>2</sup>)</label>
+                        <input type="text" id="koF" name="koF" disabled>
+                        <br>
+                        <label for="koT">Térfogat (cm<sup>3</sup>)</label>
+                        <input type="text" id="koT" name="koT" disabled>
+                        <br>
+
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

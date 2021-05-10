@@ -1,0 +1,23 @@
+input {
+  float: right;
+}
+input:focus {
+  border: 2px solid #555;
+}
+body {
+  background-color: lightblue;
+}
+div.card {
+  margin: 1rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+p {
+  float: right;
+}
+h1 {
+  border: 2px solid gray;
+  width: fit-content;
+  margin: auto;
+  background-color: lightskyblue;
+}
