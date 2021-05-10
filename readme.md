@@ -1,4 +1,4 @@
 # Geometria kalkulátor
-Háromszög és téglalap kerület, terület számítás
-Henger és kocka felszín és térfogat számítás
-GitHub Pages: 
+Háromszög és téglalap kerület, terület számítás  
+Henger és kocka felszín és térfogat számítás  
+GitHub Pages: https://solettamas.github.io/Geometria-feladat/
