@@ -21,7 +21,7 @@ function hTerulet() {
     document.getElementById("hT").style.borderColor = "red";
     document.getElementById("hT").value = "Érvénytelen adat!";
   } else {
-    document.getElementById("hK").style.borderColor = "black";
+    document.getElementById("hT").style.borderColor = "black";
     haromszogTerulet = (haromszogA * haromszogMa) / 2;
     document.getElementById("hT").value = haromszogTerulet;
   }
