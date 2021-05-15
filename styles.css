@@ -20,4 +20,5 @@ h1 {
   width: fit-content;
   margin: auto;
   background-color: lightskyblue;
+  border-radius: 10px;
 }

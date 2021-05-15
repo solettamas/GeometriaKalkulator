@@ -12,6 +12,15 @@ function hKerulet() {
     haromszogK = haromszogA + haromszogB + haromszogC;
     document.getElementById("hK").value = haromszogK;
   }
+  if (isNaN(haromszogK) && document.getElementById("hK").value !== "Érvénytelen adat!" ){
+
+    document.getElementById("hK").value = "Nem elegendő adat!";
+  }
+  if(haromszogA+haromszogB<haromszogC || haromszogB+haromszogC<haromszogA || haromszogA+haromszogC<haromszogB){
+    alert("Két oldal összege nem lehet kisebb, mint a harmadik oldal!");
+    document.getElementById("hK").style.borderColor = "red";
+    document.getElementById("hK").value = "Érvénytelen adat!";
+}
 }
 function hTerulet() {
   var haromszogA = parseInt(document.getElementById("hA").value);
@@ -24,6 +33,10 @@ function hTerulet() {
     document.getElementById("hT").style.borderColor = "black";
     haromszogTerulet = (haromszogA * haromszogMa) / 2;
     document.getElementById("hT").value = haromszogTerulet;
+  }
+  if (isNaN(haromszogTerulet) && document.getElementById("hT").value !== "Érvénytelen adat!" ){
+
+    document.getElementById("hT").value = "Nem elegendő adat!";
   }
 }
 
@@ -39,6 +52,10 @@ function tKerulet() {
     teglalapKerulet = (teglalapA + teglalapB) * 2;
     document.getElementById("tK").value = teglalapKerulet.toLocaleString();
   }
+  if (isNaN(teglalapKerulet) && document.getElementById("tK").value !== "Érvénytelen adat!" ){
+
+    document.getElementById("tK").value = "Nem elegendő adat!";
+  }
 }
 
 function tTerulet() {
@@ -53,61 +70,73 @@ function tTerulet() {
     teglalapTerulet = teglalapA * teglalapB;
     document.getElementById("tT").value = teglalapTerulet.toLocaleString();
   }
+  if (isNaN(teglalapTerulet) && document.getElementById("tT").value !== "Érvénytelen adat!" ){
+
+    document.getElementById("tT").value = "Nem elegendő adat!";
+  }
 }
 
 function heFelszin() {
   var hengerSugar = parseInt(document.getElementById("heS").value);
   var hengerMagassag = parseInt(document.getElementById("heMa").value);
-
+var hengerFelszin;
   if (hengerSugar <= 0 || hengerMagassag <= 0) {
     document.getElementById("heF").style.borderColor = "red";
     document.getElementById("heF").value = "Érvénytelen adat!";
   } else {
     document.getElementById("heF").style.borderColor = "black";
-    var hengerFelszin =
+     hengerFelszin =
       2 * Math.PI * hengerSugar * (hengerSugar + hengerMagassag);
     hengerFelszin = hengerFelszin.toFixed(2);
     document.getElementById("heF").value = hengerFelszin;
+  }
+  if (isNaN(hengerFelszin) && document.getElementById("heF").value !== "Érvénytelen adat!" ){
+
+    document.getElementById("heF").value = "Nem elegendő adat!";
   }
 }
 
 function heTerfogat() {
   var hengerSugar = parseInt(document.getElementById("heS").value);
   var hengerMagassag = parseInt(document.getElementById("heMa").value);
-
+var hengerTerfogat;
   if (hengerSugar <= 0 || hengerMagassag <= 0) {
     document.getElementById("heT").style.borderColor = "red";
     document.getElementById("heT").value = "Érvénytelen adat!";
   } else {
     document.getElementById("heT").style.borderColor = "black";
-    var hengerTerfogat = Math.PI * hengerSugar * hengerSugar * hengerMagassag;
+    hengerTerfogat = Math.PI * hengerSugar * hengerSugar * hengerMagassag;
     hengerTerfogat = hengerTerfogat.toFixed(2);
     document.getElementById("heT").value = hengerTerfogat;
+  }
+  if (isNaN(hengerTerfogat) && document.getElementById("heT").value !== "Érvénytelen adat!" ){
+
+    document.getElementById("heT").value = "Nem elegendő adat!";
   }
 }
 
 function koFelszin() {
   var kockaA = parseInt(document.getElementById("koA").value);
-
+var kockaFelszin;
   if (kockaA <= 0) {
     document.getElementById("koF").style.borderColor = "red";
     document.getElementById("koF").value = "Érvénytelen adat!";
   } else {
     document.getElementById("koF").style.borderColor = "black";
-    var kockaFelszin = 6 * kockaA * kockaA;
+    kockaFelszin = 6 * kockaA * kockaA;
     document.getElementById("koF").value = kockaFelszin;
   }
 }
 
 function koTerfogat() {
   var kockaA = parseInt(document.getElementById("koA").value);
-
+var kockaTerfogat;
   if (kockaA <= 0) {
     document.getElementById("koT").style.borderColor = "red";
     document.getElementById("koT").value = "Érvénytelen adat!";
   } else {
     document.getElementById("koT").style.borderColor = "black";
-    var kockaTerfogat = kockaA * kockaA * kockaA;
+    kockaTerfogat = kockaA * kockaA * kockaA;
     document.getElementById("koT").value = kockaTerfogat;
   }
 }
